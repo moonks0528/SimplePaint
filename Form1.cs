@@ -10,7 +10,7 @@ namespace SimplePaint
         Color currentColor = Color.Black;
         int currentThickness = 2;
 
-        Bitmap canvas;
+        Bitmap canvas;1
         Graphics g;
 
         float zoom = 1.0f;
