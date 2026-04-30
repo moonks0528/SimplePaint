@@ -11,7 +11,7 @@ namespace SimplePaint
         int currentThickness = 2;
 
         Bitmap canvas;
-        Graphics g;
+        Graphics g; 
 
         public SimplePaint()
         {

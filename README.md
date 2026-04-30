@@ -1,7 +1,7 @@
 (C# 코딩) 그림판 (Simple Paint)
 ## 개요
 - C# 프로그래밍 학습
-- 1줄 소개: 사용자가 선택한 도형을 그릴 수 있는 Windows Forms 기반 프로그램
+- 1줄 소개: 사용자가 선택한 도형(직선, 사각형, 원)을 그릴 수 있는 Windows Forms 기반 프로그램
 - 사용한 플랫폼:
 	- C#, .NET Windows Forms, Visual Studio, GitHub
 - 사용한 컨트롤:
@@ -24,7 +24,13 @@
 	- Button 클릭 이벤트를 활용하여 직선, 사각형, 원 도형 선택 기능을 구현함
 	- ComboBox와 Color 클래스를 사용하여 색상 선택 기능을 구현함
 	- TrackBar의 Scroll 이벤트를 활용하여 선의 두께를 조절하는 기능을 구현함
+
+- 수업 중에 배우고 사용했던 클래스들 관련된 설명
+		- WinForms에서 제공하는 Label, Button, ComboBox, TrackBar, PictureBox, Panel 등의 기본 컨트롤을 활용하여 사용자 인터페이스를 구성하였다.
+		- Color 클래스와 Graphics, Bitmap 객체를 사용하여 색상 처리 및 화면에 도형을 출력하는 기능을 구현하였다.
+		- 이벤트 기반 프로그래밍 방식을 적용하여 Click, SelectedIndexChanged, Scroll, Mouse 이벤트 등을 통해 사용자 입력을 처리하였다.
 ## 실행 화면 (과제1)
+
 - 코드의 실행 스크린샷과 구현 내용 설명
 ![과제1 실행화면](img/ScreenShot1.png)
 	- 초기화면
@@ -47,3 +53,22 @@
 	- ComboBox를 활용하여 색상을 선택하고, TrackBar를 통해 선의 두께를 조절할 수 있도록 하였다.
 	- PictureBox를 캔버스로 사용하여 그림을 그릴 수 있는 영역을 구성하였다.
 	
+
+## 실행 화면 (과제1)
+
+- 코드의 실행 스크린샷과 구현 내용 설명
+![과제1 실행화면](img/ScreenShot2.png)
+	- 직선 도형 선택 후 마우스 드래그로 직선을 그리는 모습
+	- 도형 선택후 마우스 드래그로 도형을 그리는 기능 구현
+	- 색깔 선택 가능
+	- 두께 선택 가능
+
+- 과제 내용
+	- 마우스 드래그로 도형 그리기 기능 구현
+	- 색상 선택 기능 구현
+	- 선 두께 조절 기능 구현
+
+- 구현 내용과 기능 설명
+	- MouseDown, MouseMove, MouseUp 이벤트를 활용하여 마우스 드래그 기반의 도형 그리기 기능을 구현하였다.
+	- ComboBox와 Color 클래스를 사용하여 색상 선택 기능을 구현하였다.
+	- TrackBar의 Scroll 이벤트를 활용하여 선의 두께를 조절하는 기능을 구현하였다.
