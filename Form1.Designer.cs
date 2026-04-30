@@ -20,22 +20,22 @@
         private void InitializeComponent()
         {
             lblAppName = new Label();
-            groupBox1 = new GroupBox();
+            grpSelect = new GroupBox();
             btnCircle = new Button();
             btnRectangle = new Button();
             btnLine = new Button();
-            groupBox2 = new GroupBox();
+            grpColor = new GroupBox();
             cmbColor = new ComboBox();
-            groupBox3 = new GroupBox();
+            grpThick = new GroupBox();
             trbLineWidth = new TrackBar();
             btnOpenFile = new Button();
             btnSaveFile = new Button();
             picCanvas = new PictureBox();
             panelTop = new Panel();
             panelMain = new Panel();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
+            grpSelect.SuspendLayout();
+            grpColor.SuspendLayout();
+            grpThick.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)trbLineWidth).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picCanvas).BeginInit();
             panelTop.SuspendLayout();
@@ -53,17 +53,17 @@
             lblAppName.TabIndex = 0;
             lblAppName.Text = "Simple Paint";
             // 
-            // groupBox1
+            // grpSelect
             // 
-            groupBox1.Controls.Add(btnCircle);
-            groupBox1.Controls.Add(btnRectangle);
-            groupBox1.Controls.Add(btnLine);
-            groupBox1.Location = new Point(3, 5);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(454, 192);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "도형 선택";
+            grpSelect.Controls.Add(btnCircle);
+            grpSelect.Controls.Add(btnRectangle);
+            grpSelect.Controls.Add(btnLine);
+            grpSelect.Location = new Point(3, 5);
+            grpSelect.Name = "grpSelect";
+            grpSelect.Size = new Size(454, 192);
+            grpSelect.TabIndex = 1;
+            grpSelect.TabStop = false;
+            grpSelect.Text = "도형 선택";
             // 
             // btnCircle
             // 
@@ -91,6 +91,7 @@
             // btnLine
             // 
             btnLine.BackgroundImageLayout = ImageLayout.Center;
+            btnLine.ImageAlign = ContentAlignment.TopCenter;
             btnLine.Location = new Point(6, 38);
             btnLine.Name = "btnLine";
             btnLine.Size = new Size(140, 139);
@@ -100,15 +101,15 @@
             btnLine.UseVisualStyleBackColor = true;
             btnLine.Click += btnLine_Click;
             // 
-            // groupBox2
+            // grpColor
             // 
-            groupBox2.Controls.Add(cmbColor);
-            groupBox2.Location = new Point(463, 5);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(276, 192);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "색 선택";
+            grpColor.Controls.Add(cmbColor);
+            grpColor.Location = new Point(463, 5);
+            grpColor.Name = "grpColor";
+            grpColor.Size = new Size(276, 192);
+            grpColor.TabIndex = 2;
+            grpColor.TabStop = false;
+            grpColor.Text = "색 선택";
             // 
             // cmbColor
             // 
@@ -119,15 +120,15 @@
             cmbColor.Size = new Size(242, 53);
             cmbColor.TabIndex = 5;
             // 
-            // groupBox3
+            // grpThick
             // 
-            groupBox3.Controls.Add(trbLineWidth);
-            groupBox3.Location = new Point(745, 5);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(316, 192);
-            groupBox3.TabIndex = 2;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "선 두께";
+            grpThick.Controls.Add(trbLineWidth);
+            grpThick.Location = new Point(745, 5);
+            grpThick.Name = "grpThick";
+            grpThick.Size = new Size(316, 192);
+            grpThick.TabIndex = 2;
+            grpThick.TabStop = false;
+            grpThick.Text = "선 두께";
             // 
             // trbLineWidth
             // 
@@ -139,6 +140,7 @@
             // btnOpenFile
             // 
             btnOpenFile.BackColor = Color.FromArgb(255, 255, 128);
+            btnOpenFile.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             btnOpenFile.Location = new Point(1067, 82);
             btnOpenFile.Name = "btnOpenFile";
             btnOpenFile.Size = new Size(140, 112);
@@ -149,6 +151,7 @@
             // btnSaveFile
             // 
             btnSaveFile.BackColor = SystemColors.ActiveCaption;
+            btnSaveFile.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             btnSaveFile.Location = new Point(1213, 82);
             btnSaveFile.Name = "btnSaveFile";
             btnSaveFile.Size = new Size(140, 112);
@@ -168,10 +171,10 @@
             // 
             // panelTop
             // 
-            panelTop.Controls.Add(groupBox1);
-            panelTop.Controls.Add(groupBox2);
+            panelTop.Controls.Add(grpSelect);
+            panelTop.Controls.Add(grpColor);
             panelTop.Controls.Add(btnSaveFile);
-            panelTop.Controls.Add(groupBox3);
+            panelTop.Controls.Add(grpThick);
             panelTop.Controls.Add(btnOpenFile);
             panelTop.Location = new Point(31, 123);
             panelTop.Name = "panelTop";
@@ -196,10 +199,10 @@
             Controls.Add(lblAppName);
             Name = "SimplePaint";
             Text = "Simple Paint v1.0";
-            groupBox1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            grpSelect.ResumeLayout(false);
+            grpColor.ResumeLayout(false);
+            grpThick.ResumeLayout(false);
+            grpThick.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)trbLineWidth).EndInit();
             ((System.ComponentModel.ISupportInitialize)picCanvas).EndInit();
             panelTop.ResumeLayout(false);
@@ -211,9 +214,9 @@
         #endregion
 
         private Label lblAppName;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private GroupBox groupBox3;
+        private GroupBox grpSelect;
+        private GroupBox grpColor;
+        private GroupBox grpThick;
         private Button btnCircle;
         private Button btnRectangle;
         private Button btnLine;
