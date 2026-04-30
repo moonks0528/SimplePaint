@@ -147,6 +147,7 @@
             btnOpenFile.TabIndex = 3;
             btnOpenFile.Text = "열기";
             btnOpenFile.UseVisualStyleBackColor = false;
+            btnOpenFile.Click += btnOpenFile_Click;
             // 
             // btnSaveFile
             // 
@@ -158,14 +159,15 @@
             btnSaveFile.TabIndex = 4;
             btnSaveFile.Text = "저장";
             btnSaveFile.UseVisualStyleBackColor = false;
+            btnSaveFile.Click += btnSaveFile_Click;
             // 
             // picCanvas
             // 
             picCanvas.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             picCanvas.BackColor = Color.White;
-            picCanvas.Location = new Point(3, 16);
+            picCanvas.Location = new Point(3, 3);
             picCanvas.Name = "picCanvas";
-            picCanvas.Size = new Size(1382, 339);
+            picCanvas.Size = new Size(1382, 674);
             picCanvas.TabIndex = 5;
             picCanvas.TabStop = false;
             // 
@@ -186,7 +188,7 @@
             panelMain.Controls.Add(picCanvas);
             panelMain.Location = new Point(31, 361);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1388, 355);
+            panelMain.Size = new Size(1388, 707);
             panelMain.TabIndex = 7;
             // 
             // SimplePaint
